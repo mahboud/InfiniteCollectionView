@@ -7,67 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F8B9EE81A1BE6D900A67FCD /* GFEImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE71A1BE6D900A67FCD /* GFEImageManager.m */; };
+		2F8B9EE81A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE71A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m */; };
 		2F8B9EEA1A1BEEDA00A67FCD /* placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE91A1BEEDA00A67FCD /* placeholder.jpeg */; };
 		2F9341411A1B5BD300801471 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341401A1B5BD300801471 /* main.m */; };
-		2F9341441A1B5BD300801471 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341431A1B5BD300801471 /* AppDelegate.m */; };
 		2F9341471A1B5BD300801471 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341461A1B5BD300801471 /* ViewController.m */; };
 		2F93414A1A1B5BD300801471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9341481A1B5BD300801471 /* Main.storyboard */; };
 		2F93414C1A1B5BD300801471 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F93414B1A1B5BD300801471 /* Images.xcassets */; };
 		2F93414F1A1B5BD300801471 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F93414D1A1B5BD300801471 /* LaunchScreen.xib */; };
-		2F93415B1A1B5BD300801471 /* GFExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93415A1A1B5BD300801471 /* GFExerciseTests.m */; };
-		2F9341671A1B5C3600801471 /* GFECollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341651A1B5C3600801471 /* GFECollectionViewCell.m */; };
-		2F9341681A1B5C3600801471 /* GFECollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9341661A1B5C3600801471 /* GFECollectionViewCell.xib */; };
-		2F93416B1A1B5C6700801471 /* GFECollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93416A1A1B5C6700801471 /* GFECollectionViewDataSource.m */; };
-		2F93416E1A1B5CA700801471 /* GFECollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93416D1A1B5CA700801471 /* GFECollectionViewLayout.m */; };
+		2F9341671A1B5C3600801471 /* InfiniteCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341651A1B5C3600801471 /* InfiniteCollectionViewCell.m */; };
+		2F9341681A1B5C3600801471 /* InfiniteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9341661A1B5C3600801471 /* InfiniteCollectionViewCell.xib */; };
+		2F93416B1A1B5C6700801471 /* InfiniteCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93416A1A1B5C6700801471 /* InfiniteCollectionViewDataSource.m */; };
+		2F93416E1A1B5CA700801471 /* InfiniteCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93416D1A1B5CA700801471 /* InfiniteCollectionViewLayout.m */; };
+		980495B21A4CED3D00FE2ECD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 980495B11A4CED3D00FE2ECD /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2F9341551A1B5BD300801471 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F9341331A1B5BD300801471 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F93413A1A1B5BD300801471;
-			remoteInfo = GFExercise;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		2F8B9EE61A1BE6D900A67FCD /* GFEImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFEImageManager.h; sourceTree = "<group>"; };
-		2F8B9EE71A1BE6D900A67FCD /* GFEImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFEImageManager.m; sourceTree = "<group>"; };
+		2F8B9EE61A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteCollectionViewImageManager.h; sourceTree = "<group>"; };
+		2F8B9EE71A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteCollectionViewImageManager.m; sourceTree = "<group>"; };
 		2F8B9EE91A1BEEDA00A67FCD /* placeholder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpeg; sourceTree = "<group>"; };
-		2F93413B1A1B5BD300801471 /* GFExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GFExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F93413B1A1B5BD300801471 /* InfiniteCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F93413F1A1B5BD300801471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F9341401A1B5BD300801471 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F9341421A1B5BD300801471 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2F9341431A1B5BD300801471 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2F9341451A1B5BD300801471 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2F9341461A1B5BD300801471 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2F9341491A1B5BD300801471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F93414B1A1B5BD300801471 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F93414E1A1B5BD300801471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2F9341541A1B5BD300801471 /* GFExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GFExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F9341591A1B5BD300801471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F93415A1A1B5BD300801471 /* GFExerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GFExerciseTests.m; sourceTree = "<group>"; };
-		2F9341641A1B5C3600801471 /* GFECollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFECollectionViewCell.h; sourceTree = "<group>"; };
-		2F9341651A1B5C3600801471 /* GFECollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFECollectionViewCell.m; sourceTree = "<group>"; };
-		2F9341661A1B5C3600801471 /* GFECollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFECollectionViewCell.xib; sourceTree = "<group>"; };
-		2F9341691A1B5C6700801471 /* GFECollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFECollectionViewDataSource.h; sourceTree = "<group>"; };
-		2F93416A1A1B5C6700801471 /* GFECollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFECollectionViewDataSource.m; sourceTree = "<group>"; };
-		2F93416C1A1B5CA700801471 /* GFECollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFECollectionViewLayout.h; sourceTree = "<group>"; };
-		2F93416D1A1B5CA700801471 /* GFECollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFECollectionViewLayout.m; sourceTree = "<group>"; };
+		2F9341641A1B5C3600801471 /* InfiniteCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteCollectionViewCell.h; sourceTree = "<group>"; };
+		2F9341651A1B5C3600801471 /* InfiniteCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteCollectionViewCell.m; sourceTree = "<group>"; };
+		2F9341661A1B5C3600801471 /* InfiniteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfiniteCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F9341691A1B5C6700801471 /* InfiniteCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteCollectionViewDataSource.h; sourceTree = "<group>"; };
+		2F93416A1A1B5C6700801471 /* InfiniteCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteCollectionViewDataSource.m; sourceTree = "<group>"; };
+		2F93416C1A1B5CA700801471 /* InfiniteCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteCollectionViewLayout.h; sourceTree = "<group>"; };
+		2F93416D1A1B5CA700801471 /* InfiniteCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteCollectionViewLayout.m; sourceTree = "<group>"; };
+		980495B11A4CED3D00FE2ECD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = InfiniteCollectionView/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		98596B7F1A1C7C4200D0AF27 /* geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2F9341381A1B5BD300801471 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F9341511A1B5BD300801471 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +59,7 @@
 		2F9341321A1B5BD300801471 = {
 			isa = PBXGroup;
 			children = (
-				2F93413D1A1B5BD300801471 /* GFExercise */,
-				2F9341571A1B5BD300801471 /* GFExerciseTests */,
+				2F93413D1A1B5BD300801471 /* InfiniteCollectionView */,
 				2F93413C1A1B5BD300801471 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,36 +67,35 @@
 		2F93413C1A1B5BD300801471 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F93413B1A1B5BD300801471 /* GFExercise.app */,
-				2F9341541A1B5BD300801471 /* GFExerciseTests.xctest */,
+				2F93413B1A1B5BD300801471 /* InfiniteCollectionView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2F93413D1A1B5BD300801471 /* GFExercise */ = {
+		2F93413D1A1B5BD300801471 /* InfiniteCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				2F9341421A1B5BD300801471 /* AppDelegate.h */,
-				2F9341431A1B5BD300801471 /* AppDelegate.m */,
+				980495B11A4CED3D00FE2ECD /* AppDelegate.m */,
 				2F9341451A1B5BD300801471 /* ViewController.h */,
 				2F9341461A1B5BD300801471 /* ViewController.m */,
 				2F9341481A1B5BD300801471 /* Main.storyboard */,
 				98596B7F1A1C7C4200D0AF27 /* geometry.h */,
-				2F9341691A1B5C6700801471 /* GFECollectionViewDataSource.h */,
-				2F93416A1A1B5C6700801471 /* GFECollectionViewDataSource.m */,
-				2F93416C1A1B5CA700801471 /* GFECollectionViewLayout.h */,
-				2F93416D1A1B5CA700801471 /* GFECollectionViewLayout.m */,
-				2F9341641A1B5C3600801471 /* GFECollectionViewCell.h */,
-				2F9341651A1B5C3600801471 /* GFECollectionViewCell.m */,
-				2F9341661A1B5C3600801471 /* GFECollectionViewCell.xib */,
-				2F8B9EE61A1BE6D900A67FCD /* GFEImageManager.h */,
-				2F8B9EE71A1BE6D900A67FCD /* GFEImageManager.m */,
+				2F9341691A1B5C6700801471 /* InfiniteCollectionViewDataSource.h */,
+				2F93416A1A1B5C6700801471 /* InfiniteCollectionViewDataSource.m */,
+				2F93416C1A1B5CA700801471 /* InfiniteCollectionViewLayout.h */,
+				2F93416D1A1B5CA700801471 /* InfiniteCollectionViewLayout.m */,
+				2F9341641A1B5C3600801471 /* InfiniteCollectionViewCell.h */,
+				2F9341651A1B5C3600801471 /* InfiniteCollectionViewCell.m */,
+				2F9341661A1B5C3600801471 /* InfiniteCollectionViewCell.xib */,
+				2F8B9EE61A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.h */,
+				2F8B9EE71A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m */,
 				2F93414B1A1B5BD300801471 /* Images.xcassets */,
 				2F8B9EE91A1BEEDA00A67FCD /* placeholder.jpeg */,
 				2F93414D1A1B5BD300801471 /* LaunchScreen.xib */,
 				2F93413E1A1B5BD300801471 /* Supporting Files */,
 			);
-			path = GFExercise;
+			path = InfiniteCollectionView;
 			sourceTree = "<group>";
 		};
 		2F93413E1A1B5BD300801471 /* Supporting Files */ = {
@@ -130,29 +107,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2F9341571A1B5BD300801471 /* GFExerciseTests */ = {
-			isa = PBXGroup;
-			children = (
-				2F93415A1A1B5BD300801471 /* GFExerciseTests.m */,
-				2F9341581A1B5BD300801471 /* Supporting Files */,
-			);
-			path = GFExerciseTests;
-			sourceTree = "<group>";
-		};
-		2F9341581A1B5BD300801471 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2F9341591A1B5BD300801471 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F93413A1A1B5BD300801471 /* GFExercise */ = {
+		2F93413A1A1B5BD300801471 /* InfiniteCollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F93415E1A1B5BD300801471 /* Build configuration list for PBXNativeTarget "GFExercise" */;
+			buildConfigurationList = 2F93415E1A1B5BD300801471 /* Build configuration list for PBXNativeTarget "InfiniteCollectionView" */;
 			buildPhases = (
 				2F9341371A1B5BD300801471 /* Sources */,
 				2F9341381A1B5BD300801471 /* Frameworks */,
@@ -162,28 +122,10 @@
 			);
 			dependencies = (
 			);
-			name = GFExercise;
-			productName = GFExercise;
-			productReference = 2F93413B1A1B5BD300801471 /* GFExercise.app */;
+			name = InfiniteCollectionView;
+			productName = InfiniteCollectionView;
+			productReference = 2F93413B1A1B5BD300801471 /* InfiniteCollectionView.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2F9341531A1B5BD300801471 /* GFExerciseTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F9341611A1B5BD300801471 /* Build configuration list for PBXNativeTarget "GFExerciseTests" */;
-			buildPhases = (
-				2F9341501A1B5BD300801471 /* Sources */,
-				2F9341511A1B5BD300801471 /* Frameworks */,
-				2F9341521A1B5BD300801471 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2F9341561A1B5BD300801471 /* PBXTargetDependency */,
-			);
-			name = GFExerciseTests;
-			productName = GFExerciseTests;
-			productReference = 2F9341541A1B5BD300801471 /* GFExerciseTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -197,13 +139,9 @@
 					2F93413A1A1B5BD300801471 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					2F9341531A1B5BD300801471 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 2F93413A1A1B5BD300801471;
-					};
 				};
 			};
-			buildConfigurationList = 2F9341361A1B5BD300801471 /* Build configuration list for PBXProject "GFExercise" */;
+			buildConfigurationList = 2F9341361A1B5BD300801471 /* Build configuration list for PBXProject "InfiniteCollectionView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -216,8 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F93413A1A1B5BD300801471 /* GFExercise */,
-				2F9341531A1B5BD300801471 /* GFExerciseTests */,
+				2F93413A1A1B5BD300801471 /* InfiniteCollectionView */,
 			);
 		};
 /* End PBXProject section */
@@ -231,14 +168,7 @@
 				2F93414F1A1B5BD300801471 /* LaunchScreen.xib in Resources */,
 				2F8B9EEA1A1BEEDA00A67FCD /* placeholder.jpeg in Resources */,
 				2F93414C1A1B5BD300801471 /* Images.xcassets in Resources */,
-				2F9341681A1B5C3600801471 /* GFECollectionViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F9341521A1B5BD300801471 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2F9341681A1B5C3600801471 /* InfiniteCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,33 +179,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F93416B1A1B5C6700801471 /* GFECollectionViewDataSource.m in Sources */,
+				2F93416B1A1B5C6700801471 /* InfiniteCollectionViewDataSource.m in Sources */,
 				2F9341471A1B5BD300801471 /* ViewController.m in Sources */,
-				2F9341441A1B5BD300801471 /* AppDelegate.m in Sources */,
 				2F9341411A1B5BD300801471 /* main.m in Sources */,
-				2F9341671A1B5C3600801471 /* GFECollectionViewCell.m in Sources */,
-				2F93416E1A1B5CA700801471 /* GFECollectionViewLayout.m in Sources */,
-				2F8B9EE81A1BE6D900A67FCD /* GFEImageManager.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F9341501A1B5BD300801471 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F93415B1A1B5BD300801471 /* GFExerciseTests.m in Sources */,
+				2F9341671A1B5C3600801471 /* InfiniteCollectionViewCell.m in Sources */,
+				2F93416E1A1B5CA700801471 /* InfiniteCollectionViewLayout.m in Sources */,
+				2F8B9EE81A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m in Sources */,
+				980495B21A4CED3D00FE2ECD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2F9341561A1B5BD300801471 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2F93413A1A1B5BD300801471 /* GFExercise */;
-			targetProxy = 2F9341551A1B5BD300801471 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2F9341481A1B5BD300801471 /* Main.storyboard */ = {
@@ -379,9 +293,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = GFExercise/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/InfiniteCollectionView/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InfiniteCollectionView;
 			};
 			name = Debug;
 		};
@@ -389,50 +303,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = GFExercise/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/InfiniteCollectionView/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		2F9341621A1B5BD300801471 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GFExerciseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GFExercise.app/GFExercise";
-			};
-			name = Debug;
-		};
-		2F9341631A1B5BD300801471 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GFExerciseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GFExercise.app/GFExercise";
+				PRODUCT_NAME = InfiniteCollectionView;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F9341361A1B5BD300801471 /* Build configuration list for PBXProject "GFExercise" */ = {
+		2F9341361A1B5BD300801471 /* Build configuration list for PBXProject "InfiniteCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F93415C1A1B5BD300801471 /* Debug */,
@@ -441,20 +321,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F93415E1A1B5BD300801471 /* Build configuration list for PBXNativeTarget "GFExercise" */ = {
+		2F93415E1A1B5BD300801471 /* Build configuration list for PBXNativeTarget "InfiniteCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F93415F1A1B5BD300801471 /* Debug */,
 				2F9341601A1B5BD300801471 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2F9341611A1B5BD300801471 /* Build configuration list for PBXNativeTarget "GFExerciseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F9341621A1B5BD300801471 /* Debug */,
-				2F9341631A1B5BD300801471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

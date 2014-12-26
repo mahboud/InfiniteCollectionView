@@ -11,6 +11,7 @@ This project demontrates:
 
 - getting images using NSURLSession
 - caching images for use in a collection view using NSCache
-- using CollectionViewLayout to manage a repeating set of cells
-- populating the CollectionView with images from a server, asynchronously in the background
-- manioulating the ScrollView to give the illusion of continous infinite scrolling
+- using UICollectionViewLayout to manage a repeating set of cells
+- populating the UICollectionView with images from a server, asynchronously in the background
+- manioulating the UIScrollView to give the illusion of continous infinite scrolling
+- enhancing scroll performance of cells with shadows by using UIBezierPath

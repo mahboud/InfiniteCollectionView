@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface InfiniteCollectionViewImageManager : NSObject {
+@interface InfiniteCollectionViewImageManager : NSObject <NSURLSessionDelegate> {
 
 }
 

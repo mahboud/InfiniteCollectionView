@@ -14,7 +14,7 @@
 }
 
 @property (nonatomic) NSInteger numberOfSections;
-@property (nonatomic) NSInteger numberOfRows;
+@property (nonatomic) NSInteger numberOfItems;
 
 - (UIImage *) getImageForPath:(NSIndexPath *)path completionHandler:(void (^)(UIImage *))completionHandler;
 

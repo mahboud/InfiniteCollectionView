@@ -22,11 +22,11 @@ static NSString *basePath = @"/tests/superheroes/";
 }
 
 #define number_of_sections 15
-#define number_of_rows		5
+#define number_of_items		5
 
--(NSInteger)numberOfRows
+-(NSInteger)numberOfItems
 {
-	return number_of_rows;
+	return number_of_items;
 }
 
 -(NSInteger)numberOfSections
@@ -74,15 +74,15 @@ static NSString *basePath = @"/tests/superheroes/";
 }
 - (UIImage *) getImageForPath:(NSIndexPath *)path completionHandler:(void (^)(UIImage *))completionHandler
 {
-	NSInteger realSection, realRow;
-	realRow = path.row;
-	if (realRow >= number_of_rows)
-		realRow = realRow % number_of_rows;
+	NSInteger realSection, realItem;
+	realItem = path.item;
+	if (realItem >= number_of_items)
+		realItem = realItem % number_of_items;
 	realSection = path.section;
 	if (realSection >= number_of_sections)
 		realSection = realSection % number_of_sections;
 	
-	NSString *key = [NSString stringWithFormat:@"%04ld-%04ld", (long)realRow, (long)realSection];
+	NSString *key = [NSString stringWithFormat:@"%04ld-%04ld", (long)realItem, (long)realSection];
 	
 	UIImage *image = [cache objectForKey:key];
 	if (image == nil) {

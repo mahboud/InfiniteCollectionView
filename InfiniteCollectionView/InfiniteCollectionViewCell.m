@@ -18,6 +18,8 @@
 	self.layer.shadowOffset = CGSizeMake(2, 2);
 	self.layer.shadowRadius	= 10;
 	self.layer.shadowOpacity = 1.0;
+	_activityIndicator.layer.backgroundColor = UIColor.darkGrayColor.CGColor;
+	_activityIndicator.layer.cornerRadius = 5;
 }
 
 -(void)layoutSubviews {

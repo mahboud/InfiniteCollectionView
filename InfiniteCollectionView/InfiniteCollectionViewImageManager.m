@@ -47,7 +47,7 @@ static NSString *basePath = @"/tests/superheroes/";
 		cache = [NSCache.alloc init];
 //		static dispatch_once_t onceToken;
 //		dispatch_once(&onceToken, ^{
-		
+//	No need for this to be a singleton since it isn't a backgroundSession
 			NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
 
 			configuration.sessionSendsLaunchEvents = YES;

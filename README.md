@@ -13,5 +13,5 @@ This project demonstrates:
 - caching images for use in a collection view using NSCache
 - using UICollectionViewLayout to manage a repeating set of cells
 - populating the UICollectionView with images from a server, asynchronously in the background
-- manioulating the UIScrollView to give the illusion of continous infinite scrolling
+- manipulating the UIScrollView to give the illusion of continous infinite scrolling
 - enhancing scroll performance of cells with shadows by using UIBezierPath

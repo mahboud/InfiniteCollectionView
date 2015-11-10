@@ -7,7 +7,7 @@ This project will download a set of images from a server, and then use those ima
 
 The collectionview will reset its scroll position once it has been scrolled a few pagefuls, and scrolling has stopped.  This reset will create the illusion that the user can scroll forever.  We only reset the scroll position when the scroll movement has come to a stop, as that eliminates any chance of a stutter in the scroll movement.
 
-This project demontrates:
+This project demonstrates:
 
 - getting images using NSURLSession
 - caching images for use in a collection view using NSCache

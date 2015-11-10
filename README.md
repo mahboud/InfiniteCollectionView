@@ -1,7 +1,7 @@
 InfiniteCollectionView
 ======================
 
-A CollectionView-based photo gallery that can be scrolled in both axis infinitely.
+A CollectionView-based photo gallery that can be scrolled in both axes infinitely.
 
 This project will download a set of images from a server, and then use those images to populate a UICollectionView.  The collection view can be scrolled in all directions, and when we run out of unique image files, we repeat the same ones again.
 

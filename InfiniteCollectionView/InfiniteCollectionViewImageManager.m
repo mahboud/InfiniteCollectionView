@@ -59,7 +59,7 @@ static NSString *basePath = @"/tests/superheroes/";
 	return self;
 }
 
-- (void)downloadImage:(NSString *)file  completionHandler:(void (^)(UIImage *))completionHandler
+- (void)downloadImage:(NSString *)file  completionHandler:(void (^)(UIImage *image))completionHandler
 {
 	NSURL *downloadURL = [[[baseURL URL] URLByAppendingPathComponent:file] URLByAppendingPathExtension:@"jpeg"];
 	

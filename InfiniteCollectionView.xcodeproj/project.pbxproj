@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F7F77631BCDE24100D7B28A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7F77621BCDE24100D7B28A /* main.m */; };
+		2F7F77661BCDE24100D7B28A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7F77651BCDE24100D7B28A /* AppDelegate.m */; };
+		2F7F77731BCDE28C00D7B28A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341461A1B5BD300801471 /* ViewController.m */; };
+		2F7F77761BCDE36100D7B28A /* InfiniteCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93416A1A1B5C6700801471 /* InfiniteCollectionViewDataSource.m */; };
+		2F7F77771BCDE36100D7B28A /* InfiniteCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F93416D1A1B5CA700801471 /* InfiniteCollectionViewLayout.m */; };
+		2F7F77781BCDE36100D7B28A /* InfiniteCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341651A1B5C3600801471 /* InfiniteCollectionViewCell.m */; };
+		2F7F777A1BCDE36100D7B28A /* InfiniteCollectionViewImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE71A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m */; };
+		2F7F777B1BCDE36700D7B28A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F93414B1A1B5BD300801471 /* Images.xcassets */; };
+		2F7F777D1BCDE59A00D7B28A /* InfiniteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7F777C1BCDE59A00D7B28A /* InfiniteCollectionViewCell.xib */; };
+		2F7F777F1BCDE80600D7B28A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7F777E1BCDE80600D7B28A /* Main.storyboard */; };
+		2F7F77801BCDEA3900D7B28A /* placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE91A1BEEDA00A67FCD /* placeholder.jpeg */; };
 		2F8B9EE81A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE71A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m */; };
 		2F8B9EEA1A1BEEDA00A67FCD /* placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8B9EE91A1BEEDA00A67FCD /* placeholder.jpeg */; };
 		2F9341411A1B5BD300801471 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9341401A1B5BD300801471 /* main.m */; };
@@ -22,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F7F775F1BCDE24100D7B28A /* InfiniteCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7F77621BCDE24100D7B28A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2F7F77641BCDE24100D7B28A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2F7F77651BCDE24100D7B28A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2F7F776F1BCDE24100D7B28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7F777C1BCDE59A00D7B28A /* InfiniteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfiniteCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F7F777E1BCDE80600D7B28A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2F8B9EE61A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteCollectionViewImageManager.h; sourceTree = "<group>"; };
 		2F8B9EE71A1BE6D900A67FCD /* InfiniteCollectionViewImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteCollectionViewImageManager.m; sourceTree = "<group>"; };
 		2F8B9EE91A1BEEDA00A67FCD /* placeholder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpeg; sourceTree = "<group>"; };
@@ -46,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2F7F775C1BCDE24100D7B28A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9341381A1B5BD300801471 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,10 +81,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F7F77601BCDE24100D7B28A /* InfiniteCV */ = {
+			isa = PBXGroup;
+			children = (
+				2F7F777E1BCDE80600D7B28A /* Main.storyboard */,
+				2F7F77641BCDE24100D7B28A /* AppDelegate.h */,
+				2F7F77651BCDE24100D7B28A /* AppDelegate.m */,
+				2F7F776F1BCDE24100D7B28A /* Info.plist */,
+				2F7F777C1BCDE59A00D7B28A /* InfiniteCollectionViewCell.xib */,
+				2F7F77611BCDE24100D7B28A /* Supporting Files */,
+			);
+			path = InfiniteCV;
+			sourceTree = "<group>";
+		};
+		2F7F77611BCDE24100D7B28A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F7F77621BCDE24100D7B28A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2F9341321A1B5BD300801471 = {
 			isa = PBXGroup;
 			children = (
 				2F93413D1A1B5BD300801471 /* InfiniteCollectionView */,
+				2F7F77601BCDE24100D7B28A /* InfiniteCV */,
 				2F93413C1A1B5BD300801471 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2F93413B1A1B5BD300801471 /* InfiniteCollectionView.app */,
+				2F7F775F1BCDE24100D7B28A /* InfiniteCV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +158,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2F7F775E1BCDE24100D7B28A /* InfiniteCV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7F77721BCDE24100D7B28A /* Build configuration list for PBXNativeTarget "InfiniteCV" */;
+			buildPhases = (
+				2F7F775B1BCDE24100D7B28A /* Sources */,
+				2F7F775C1BCDE24100D7B28A /* Frameworks */,
+				2F7F775D1BCDE24100D7B28A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InfiniteCV;
+			productName = InfiniteCV;
+			productReference = 2F7F775F1BCDE24100D7B28A /* InfiniteCV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2F93413A1A1B5BD300801471 /* InfiniteCollectionView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F93415E1A1B5BD300801471 /* Build configuration list for PBXNativeTarget "InfiniteCollectionView" */;
@@ -133,11 +198,15 @@
 		2F9341331A1B5BD300801471 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = mahboud;
 				TargetAttributes = {
+					2F7F775E1BCDE24100D7B28A = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					2F93413A1A1B5BD300801471 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = FG8NNNY6FP;
 					};
 				};
 			};
@@ -154,11 +223,23 @@
 			projectRoot = "";
 			targets = (
 				2F93413A1A1B5BD300801471 /* InfiniteCollectionView */,
+				2F7F775E1BCDE24100D7B28A /* InfiniteCV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2F7F775D1BCDE24100D7B28A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7F777F1BCDE80600D7B28A /* Main.storyboard in Resources */,
+				2F7F777B1BCDE36700D7B28A /* Images.xcassets in Resources */,
+				2F7F777D1BCDE59A00D7B28A /* InfiniteCollectionViewCell.xib in Resources */,
+				2F7F77801BCDEA3900D7B28A /* placeholder.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9341391A1B5BD300801471 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +255,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2F7F775B1BCDE24100D7B28A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7F77731BCDE28C00D7B28A /* ViewController.m in Sources */,
+				2F7F77761BCDE36100D7B28A /* InfiniteCollectionViewDataSource.m in Sources */,
+				2F7F77771BCDE36100D7B28A /* InfiniteCollectionViewLayout.m in Sources */,
+				2F7F77661BCDE24100D7B28A /* AppDelegate.m in Sources */,
+				2F7F777A1BCDE36100D7B28A /* InfiniteCollectionViewImageManager.m in Sources */,
+				2F7F77781BCDE36100D7B28A /* InfiniteCollectionViewCell.m in Sources */,
+				2F7F77631BCDE24100D7B28A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9341371A1B5BD300801471 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +305,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2F7F77701BCDE24100D7B28A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = InfiniteCV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitsonthego.1apps.InfiniteCV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		2F7F77711BCDE24100D7B28A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = InfiniteCV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitsonthego.1apps.InfiniteCV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		2F93415C1A1B5BD300801471 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -230,6 +361,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -292,8 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/InfiniteCollectionView/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitsonthego.1apps.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = InfiniteCollectionView;
 			};
 			name = Debug;
@@ -302,8 +436,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/InfiniteCollectionView/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitsonthego.1apps.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = InfiniteCollectionView;
 			};
 			name = Release;
@@ -311,6 +447,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2F7F77721BCDE24100D7B28A /* Build configuration list for PBXNativeTarget "InfiniteCV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7F77701BCDE24100D7B28A /* Debug */,
+				2F7F77711BCDE24100D7B28A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2F9341361A1B5BD300801471 /* Build configuration list for PBXProject "InfiniteCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

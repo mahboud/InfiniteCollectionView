@@ -36,10 +36,23 @@
 	[self.collectionView registerNib: [UINib nibWithNibName:@"InfiniteCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"InfiniteCollectionViewCell"];
 }
 
-#define page_fulls_forward	100 // basically enough so that a peron who is trying to get to the left or top edge gets tired and gives us a chance to reset
+#define page_fulls_forward	1 // basically enough so that a peron who is trying to get to the left or top edge gets tired and gives us a chance to reset
+
+-(NSIndexPath *)indexPathForPreferredFocusedViewInCollectionView:(UICollectionView *)collectionView
+{
+	return [NSIndexPath indexPathForItem:page_fulls_forward * _realNumberOfItems inSection:page_fulls_forward * _realNumberOfSections];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUpdateFocusInContext:(UICollectionViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
+{
+	NSLog(@"%s: visited here", __PRETTY_FUNCTION__);
+}
+
+
 
 - (void) showCollectionView {
-	[_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:page_fulls_forward * _realNumberOfItems inSection:page_fulls_forward * _realNumberOfSections] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally | UICollectionViewScrollPositionCenteredVertically animated:NO];
+
+//	[_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:page_fulls_forward * _realNumberOfItems inSection:page_fulls_forward * _realNumberOfSections] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally | UICollectionViewScrollPositionCenteredVertically animated:NO];
 	[UIView animateWithDuration: 1.0
 					 animations:^{
 						 _collectionView.alpha = 1.0;
@@ -49,13 +62,13 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 	
-	return _realNumberOfSections * 1000;
+	return 5;//_realNumberOfSections * 1000;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 	
-	return _realNumberOfItems * 1000;
+	return 5;//_realNumberOfItems * 1000;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -103,19 +116,19 @@
 }
 
 
-
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-	[self scrollBackToStart];
-
-}
-
-
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-	if (decelerate == NO)
-		[self scrollBackToStart];
-}
+//
+//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+//{
+//	[self scrollBackToStart];
+//
+//}
+//
+//
+//-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+//{
+//	if (decelerate == NO)
+//		[self scrollBackToStart];
+//}
 
 - (void)scrollBackToStart
 {
@@ -148,9 +161,11 @@
 		newYOffset = newItem * (item_height + gap_between_top_and_side_of_cells) + yOffset;
 
 	
-//	NSLog(@"%s - %@;  xLoc = %ld,  xOff = %f,  newSection = %ld", __PRETTY_FUNCTION__, NSStringFromCGPoint(offset), section, xOffset, newSection	);
+	NSLog(@"%s - %@;  xLoc = %ld,  xOff = %f,  newSection = %ld, newItem = %ld", __PRETTY_FUNCTION__, NSStringFromCGPoint(offset), section, xOffset, newSection, newItem	);
 	self.collectionView.contentOffset = CGPointMake(newXOffset ?: offset.x, newYOffset ?: offset.y);;
-
+	[self.collectionView setNeedsFocusUpdate];
+	// [self.collectionView updateFocusIfNeeded];
+	
 }
 
 @end

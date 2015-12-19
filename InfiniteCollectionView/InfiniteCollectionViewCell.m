@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-	self.imageView.clipsToBounds = YES;
+//	self.imageView.clipsToBounds = YES;
 	self.clipsToBounds = NO;
 	self.layer.shadowColor = [UIColor grayColor].CGColor;
 	self.layer.shadowOffset = CGSizeMake(2, 2);

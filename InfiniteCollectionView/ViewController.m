@@ -25,7 +25,11 @@
 	[_dataSource setup];
 	
 	_collectionView.alpha = 0;
+}
 
+- (UIView *)preferredFocusedView
+{
+	return _collectionView;
 }
 
 -(void)viewDidAppear:(BOOL)animated

@@ -9,10 +9,9 @@
 #ifndef InfiniteCollectionView_geometry_h
 #define InfiniteCollectionView_geometry_h
 
-#define item_width	160
-#define item_height	160
+#define item_width 160
+#define item_height 160
 
-#define gap_between_top_and_side_of_cells	40
-
+#define gap_between_top_and_side_of_cells 40
 
 #endif

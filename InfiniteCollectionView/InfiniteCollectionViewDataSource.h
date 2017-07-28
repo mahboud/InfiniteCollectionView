@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InfiniteCollectionViewDataSource : NSObject <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
-@property (nonatomic) UICollectionView *collectionView;
+@interface InfiniteCollectionViewDataSource
+    : NSObject <UICollectionViewDataSource, UICollectionViewDelegate,
+                UIScrollViewDelegate>
+@property(nonatomic) UICollectionView *collectionView;
 
 - (void)setup;
 - (void)showCollectionView;

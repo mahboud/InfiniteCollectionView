@@ -11,27 +11,24 @@
 @implementation InfiniteCollectionViewCell
 
 - (void)awakeFromNib {
-	[super awakeFromNib];
-    // Initialization code
-//	self.imageView.clipsToBounds = YES;
-	self.clipsToBounds = NO;
-	self.layer.shadowColor = [UIColor grayColor].CGColor;
-	self.layer.shadowOffset = CGSizeMake(2, 2);
-	self.layer.shadowRadius	= 10;
-	self.layer.shadowOpacity = 1.0;
-	_activityIndicator.layer.backgroundColor = UIColor.darkGrayColor.CGColor;
-	_activityIndicator.layer.cornerRadius = 5;
+  [super awakeFromNib];
+  // Initialization code
+  //	self.imageView.clipsToBounds = YES;
+  self.clipsToBounds = NO;
+  self.layer.shadowColor = [UIColor grayColor].CGColor;
+  self.layer.shadowOffset = CGSizeMake(2, 2);
+  self.layer.shadowRadius = 10;
+  self.layer.shadowOpacity = 1.0;
+  _activityIndicator.layer.backgroundColor = UIColor.darkGrayColor.CGColor;
+  _activityIndicator.layer.cornerRadius = 5;
 }
 
--(void)layoutSubviews {
-	[super layoutSubviews];
-	UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.bounds];
-	self.layer.shadowPath = path.CGPath;
-
-
+- (void)layoutSubviews {
+  [super layoutSubviews];
+  UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.bounds];
+  self.layer.shadowPath = path.CGPath;
 }
--(void)setDownloaded
-{
-	[_activityIndicator stopAnimating];
+- (void)setDownloaded {
+  [_activityIndicator stopAnimating];
 }
 @end

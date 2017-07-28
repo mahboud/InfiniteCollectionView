@@ -10,37 +10,35 @@
 #import "InfiniteCollectionViewDataSource.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic) InfiniteCollectionViewDataSource *dataSource;
+@property(weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property(nonatomic) InfiniteCollectionViewDataSource *dataSource;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	_dataSource = [[InfiniteCollectionViewDataSource alloc] init];
-	_dataSource.collectionView = _collectionView;
+  [super viewDidLoad];
+  // Do any additional setup after loading the view, typically from a nib.
+  _dataSource = [[InfiniteCollectionViewDataSource alloc] init];
+  _dataSource.collectionView = _collectionView;
 
-	[_dataSource setup];
-	
-	_collectionView.alpha = 0;
+  [_dataSource setup];
+
+  _collectionView.alpha = 0;
 }
 
-- (UIView *)preferredFocusedView
-{
-	return _collectionView;
+- (UIView *)preferredFocusedView {
+  return _collectionView;
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-	[_dataSource showCollectionView];
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [_dataSource showCollectionView];
 }
 
 - (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 @end

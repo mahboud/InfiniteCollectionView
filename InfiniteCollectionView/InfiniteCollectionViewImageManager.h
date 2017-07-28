@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface InfiniteCollectionViewImageManager : NSObject <NSURLSessionDelegate> {
-
+@interface InfiniteCollectionViewImageManager
+    : NSObject <NSURLSessionDelegate> {
 }
 
-@property (nonatomic) NSInteger numberOfSections;
-@property (nonatomic) NSInteger numberOfItems;
+@property(nonatomic) NSInteger numberOfSections;
+@property(nonatomic) NSInteger numberOfItems;
 
-- (UIImage *) getImageForPath:(NSIndexPath *)path completionHandler:(void (^)(UIImage *))completionHandler;
+- (UIImage *)getImageForPath:(NSIndexPath *)path
+           completionHandler:(void (^)(UIImage *))completionHandler;
 
 @end

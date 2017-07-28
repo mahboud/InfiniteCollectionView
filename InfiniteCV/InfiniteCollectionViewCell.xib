@@ -16,8 +16,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.jpeg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwZ-qz-cTY">
                         <rect key="frame" x="0.0" y="0.0" width="296" height="269"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-LI-BJR">
-                        <rect key="frame" x="4" y="15" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-LI-BJR">
+                        <rect key="frame" x="-4" y="8" width="54" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -30,7 +30,9 @@
             </view>
             <constraints>
                 <constraint firstItem="M5t-DV-RkE" firstAttribute="centerX" secondItem="0cj-bI-R6w" secondAttribute="centerX" id="38b-3J-Z3X"/>
+                <constraint firstItem="UcO-LI-BJR" firstAttribute="leading" secondItem="0cj-bI-R6w" secondAttribute="leading" constant="8" id="Hhf-kf-tJx"/>
                 <constraint firstAttribute="bottom" secondItem="fwZ-qz-cTY" secondAttribute="bottom" id="OWL-WX-pAb"/>
+                <constraint firstItem="UcO-LI-BJR" firstAttribute="top" secondItem="0cj-bI-R6w" secondAttribute="top" constant="8" id="QIG-d5-vPH"/>
                 <constraint firstItem="fwZ-qz-cTY" firstAttribute="leading" secondItem="0cj-bI-R6w" secondAttribute="leading" id="ZYV-Ss-p18"/>
                 <constraint firstItem="M5t-DV-RkE" firstAttribute="centerY" secondItem="0cj-bI-R6w" secondAttribute="centerY" id="d6b-ba-AZm"/>
                 <constraint firstItem="fwZ-qz-cTY" firstAttribute="top" secondItem="0cj-bI-R6w" secondAttribute="top" id="r4W-PI-ALP"/>

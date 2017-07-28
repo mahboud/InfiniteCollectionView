@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InfiniteCollectionViewLayout : UICollectionViewLayout
+@property (nonatomic) CGSize collectionSize;
 @property (nonatomic) CGSize itemSize;
 @end

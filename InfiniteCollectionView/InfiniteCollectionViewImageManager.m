@@ -21,8 +21,8 @@ static NSString *basePath = @"/tests/superheroes/";
 	NSCache *cache;
 }
 
-#define number_of_sections 15
-#define number_of_items		5
+#define number_of_sections 5
+#define number_of_items	15
 
 -(NSInteger)numberOfItems
 {
@@ -82,7 +82,7 @@ static NSString *basePath = @"/tests/superheroes/";
 	if (realSection >= number_of_sections)
 		realSection = realSection % number_of_sections;
 	
-	NSString *key = [NSString stringWithFormat:@"%04ld-%04ld", (long)realItem, (long)realSection];
+	NSString *key = [NSString stringWithFormat:@"%04ld-%04ld", (long)realSection, (long)realItem];
 	
 	UIImage *image = [cache objectForKey:key];
 	if (image == nil) {

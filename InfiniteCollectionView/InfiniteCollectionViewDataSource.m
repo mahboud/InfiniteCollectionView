@@ -18,7 +18,11 @@
 	NSInteger _realNumberOfSections;
 	NSInteger _realNumberOfItems;
 	InfiniteCollectionViewImageManager *_imageManager;
+	CGSize collectionSize;
+	NSIndexPath *tvSelectedIndexPath;
 }
+#define page_fulls_forward	2 // basically enough so that a peron who is trying to get to the left or top edge gets tired and gives us a chance to reset
+
 - (void)setup
 {
 	_layout = [[InfiniteCollectionViewLayout alloc] init];
@@ -32,27 +36,20 @@
 	_realNumberOfItems = _imageManager.numberOfItems;
 	self.collectionView.dataSource = self;
 	self.collectionView.delegate = self;
-	
+
+	collectionSize.width = _realNumberOfItems * 4;
+	collectionSize.height = _realNumberOfSections * 4;
+	_layout.collectionSize = collectionSize;
 	[self.collectionView registerNib: [UINib nibWithNibName:@"InfiniteCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"InfiniteCollectionViewCell"];
-}
-
-#define page_fulls_forward	1 // basically enough so that a peron who is trying to get to the left or top edge gets tired and gives us a chance to reset
-
--(NSIndexPath *)indexPathForPreferredFocusedViewInCollectionView:(UICollectionView *)collectionView
-{
-	return [NSIndexPath indexPathForItem:page_fulls_forward * _realNumberOfItems inSection:page_fulls_forward * _realNumberOfSections];
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didUpdateFocusInContext:(UICollectionViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
-{
-	NSLog(@"%s: visited here", __PRETTY_FUNCTION__);
 }
 
 
 
 - (void) showCollectionView {
+	tvSelectedIndexPath = [NSIndexPath indexPathForItem:page_fulls_forward * _realNumberOfItems inSection:page_fulls_forward * _realNumberOfSections];
+	[self.collectionView setNeedsFocusUpdate];
 
-//	[_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:page_fulls_forward * _realNumberOfItems inSection:page_fulls_forward * _realNumberOfSections] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally | UICollectionViewScrollPositionCenteredVertically animated:NO];
+	[_collectionView scrollToItemAtIndexPath:tvSelectedIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally | UICollectionViewScrollPositionCenteredVertically animated:NO];
 	[UIView animateWithDuration: 1.0
 					 animations:^{
 						 _collectionView.alpha = 1.0;
@@ -62,13 +59,13 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 	
-	return 5;//_realNumberOfSections * 1000;
+	return collectionSize.height;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 	
-	return 5;//_realNumberOfItems * 1000;
+	return collectionSize.width;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -79,7 +76,7 @@
 	cellId = @"InfiniteCollectionViewCell";
 	InfiniteCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
 
-	cell.label.text = [NSString stringWithFormat:@"(%ld,%ld)", (long)indexPath.item, (long)indexPath.section];
+	cell.label.text = [NSString stringWithFormat:@"(%ld,%ld)", (long)indexPath.section, (long)indexPath.item];
 	cell.imageView.image = [_imageManager getImageForPath:indexPath completionHandler:^(UIImage *image) {
 		dispatch_async(dispatch_get_main_queue(), ^ {
 			InfiniteCollectionViewCell *cell = (InfiniteCollectionViewCell *) [self.collectionView cellForItemAtIndexPath:indexPath];
@@ -116,26 +113,49 @@
 }
 
 
-//
-//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
-//	[self scrollBackToStart];
-//
-//}
-//
-//
-//-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-//{
-//	if (decelerate == NO)
-//		[self scrollBackToStart];
-//}
+#if TARGET_OS_TV
+-(NSIndexPath *)indexPathForPreferredFocusedViewInCollectionView:(UICollectionView *)collectionView
+{
+	return tvSelectedIndexPath;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUpdateFocusInContext:(UICollectionViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
+{
+	NSLog(@"%s: visited here", __PRETTY_FUNCTION__);
+#if TARGET_OS_TV
+	NSIndexPath *oldIndexPath = context.previouslyFocusedIndexPath;
+	//	if (oldIndexPath) {
+	//		tvSelectedIndexPath = [NSIndexPath indexPathForItem:oldIndexPath.item - 1 inSection:oldIndexPath.section - 1];
+	//		[self.collectionView setNeedsFocusUpdate];
+	////		[self.collectionView updateFocusIfNeeded];
+	//	}
+#endif
+}
+
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+	
+}
+#else
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+	[self scrollBackToStart];
+
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+	if (decelerate == NO)
+		[self scrollBackToStart];
+}
+
 
 - (void)scrollBackToStart
 {
 	CGPoint offset = self.collectionView.contentOffset;
 	
-	NSInteger section = offset.x / (item_width + gap_between_top_and_side_of_cells);
-	CGFloat xOffset = ((NSInteger) offset.x) % (item_width + gap_between_top_and_side_of_cells);
+	NSInteger section = offset.y / (item_height + gap_between_top_and_side_of_cells);
+	CGFloat yOffset = ((NSInteger) offset.y) % (item_height + gap_between_top_and_side_of_cells);
 	NSInteger newSection = 0;
 	if (section > (page_fulls_forward + 1) * _realNumberOfSections) {
 		newSection = page_fulls_forward * _realNumberOfSections + section % _realNumberOfSections;
@@ -143,12 +163,12 @@
 	else if (section < (page_fulls_forward - 2) * _realNumberOfSections) {
 		newSection = page_fulls_forward * _realNumberOfSections + section % _realNumberOfSections;
 	}
-	CGFloat newXOffset = 0;
+	CGFloat newYOffset = 0;
 	if (newSection)
-		newXOffset = newSection * (item_width + gap_between_top_and_side_of_cells) + xOffset;
+		newYOffset = newSection * (item_height + gap_between_top_and_side_of_cells) + yOffset;
 
-	NSInteger item = offset.y / (item_height+ gap_between_top_and_side_of_cells);
-	CGFloat yOffset = ((NSInteger) offset.y) % (item_height + gap_between_top_and_side_of_cells);
+	NSInteger item = offset.x / (item_width + gap_between_top_and_side_of_cells);
+	CGFloat xOffset = ((NSInteger) offset.x) % (item_width + gap_between_top_and_side_of_cells);
 	NSInteger newItem = 0;
 	if (item > (page_fulls_forward + 1) * _realNumberOfItems) {
 		newItem = page_fulls_forward * _realNumberOfItems + item % _realNumberOfItems;
@@ -156,16 +176,14 @@
 	else if (item < (page_fulls_forward - 2) * _realNumberOfItems) {
 		newItem = page_fulls_forward * _realNumberOfItems + item % _realNumberOfItems;
 	}
-	CGFloat newYOffset = 0;
+	CGFloat newXOffset = 0;
 	if (newItem)
-		newYOffset = newItem * (item_height + gap_between_top_and_side_of_cells) + yOffset;
+		newXOffset = newItem * (item_width + gap_between_top_and_side_of_cells) + xOffset;
 
 	
 	NSLog(@"%s - %@;  xLoc = %ld,  xOff = %f,  newSection = %ld, newItem = %ld", __PRETTY_FUNCTION__, NSStringFromCGPoint(offset), section, xOffset, newSection, newItem	);
 	self.collectionView.contentOffset = CGPointMake(newXOffset ?: offset.x, newYOffset ?: offset.y);;
-	[self.collectionView setNeedsFocusUpdate];
-	// [self.collectionView updateFocusIfNeeded];
-	
 }
+#endif
 
 @end

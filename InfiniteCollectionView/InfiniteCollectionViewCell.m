@@ -11,6 +11,7 @@
 @implementation InfiniteCollectionViewCell
 
 - (void)awakeFromNib {
+	[super awakeFromNib];
     // Initialization code
 //	self.imageView.clipsToBounds = YES;
 	self.clipsToBounds = NO;
